@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Search Result</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-bg bg-light">
+        <div class="container-fluid">
+            <a href="home.html"><h2>Karcis.com</h2></a>
+            <div class="inputbox d-flex">
+                <input type="search" name="search" id="search" placeholder="Search by event, name, location...">
+                <img src="images/Line 1.png" alt="line">
+                <input type="date" name="date" id="inputDate" placeholder="Select date">
+                <button type="btn" class="btn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="btns">
+                <button type="btn" class="btn btn-outline-primary">Log in</button>
+                <button type="btn" class="btn" id="btn">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="searchresult d-flex">
+        <div class="filter">
+            <h3>Filters</h3>
+            <hr>
+            <label class="switch">
+                <input type="checkbox" name="" id="toggleSwitch">
+                <span class="slider"></span>
+                <p>Online</p>
+            </label>
+            <hr>
+            <div class="location d-flex">
+                <h3>Location</h3>
+                <i class="fa-solid fa-angle-up"></i>
+                <i class="fa-solid fa-angle-down" id="angleDown"></i>
+            </div>
+            <div id="checkbox1">
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">International</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Jakarta Selatan</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Jakarta Timur</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Tangerang Selatan</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Jabodetabek</label>
+                </div>
+            </div>
+            <hr>
+            <div class="categories d-flex">
+                <h3>Categories</h3>
+                <i class="fa-solid fa-angle-up"></i>
+                <i class="fa-solid fa-angle-down" id="angleDown"></i>
+            </div>
+            <div id="checkbox">
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Concert</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Arts</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Conference</label>
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" name="check" id="">
+                    <label for="text">Movies</label>
+                </div>
+            </div>
+            <hr>
+            <div class="price d-flex">
+                <h3>Price</h3>
+                <i class="fa-solid fa-angle-up"></i>
+                <i class="fa-solid fa-angle-down" id="angleDown"></i>
+            </div>
+            <br>
+            <div id="showRange">
+                <input type="range" name="range" id="range">
+                <br>
+                <div class="amount d-flex">
+                    <p>$10,000 </p>
+                    <p>$100,000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="events">
+            <p class="result">Search result for  <span id="showValue"></span></p>
+            <div class="eventcard d-flex">
+                <div class="card">
+                    <img src="images/event1.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Skylight Cinema: Bad Mo..</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Senayan Park</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event2.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Drive In Senja: Back to th..</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Parkiran Utama Mall @ Ala..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event3.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Anastasia the Musical</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Intercon, Pd. Indah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event1.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Lark Drive In: The Fault in..</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Parkiran ICE, BSD City</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event2.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Retro Drive In:  Breakfast..</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> QBIG BSD</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event3.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Sibili: Indera ke Enam</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Bogor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event1.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Ameican Drive-In:  Aveng..</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Senopati</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event2.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Drive</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Available Theatres</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event3.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Movies · Drive In</p>
+                            <h3 class="card-title">Meikarta Drive In: Pitch P..</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Bioskop Ala Pandemi: Oc..</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event1.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Conference · Online</p>
+                            <h3 class="card-title">Coding 105: UI/UX Design</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event2.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Conference · Online</p>
+                            <h3 class="card-title">Intro to UX/UI Design</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/event3.jpg" alt="">
+                    <div class="card-body">
+                        <h3>Nov <br>01</h3>
+                        <div class="card-text">
+                            <p class="drive">Conference · Online</p>
+                            <h3 class="card-title">Skills U: UX/UI Design</h3>
+                            <p class="card-text">$10,000 - $20,000</p>
+                            <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer d-flex">
+            <h2>Karcis.com</h2>
+            <ul>
+                <li><h2>About</h2></li>
+                <li><a href="#">About Karcis.com</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+            <ul>
+                <li><h2>Partner with us</h2></li>
+                <li><a href="#">Partnership Programs</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Connectivity Partner</a></li>
+                <li><a href="#">Promotions and events</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Loyalty Program</a></li>
+            </ul>
+            <ul>
+                <li><h2>Support</h2></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Trust and safety</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+            <ul>
+                <li><h2>Get the app</h2></li>
+                <li><a href="#">Karcis.com for Android</a></li>
+                <li><a href="#">Karcis.com for iOS</a></li>
+                <li><a href="#">Mobile site</a></li>
+                <li><a href="#">
+                    <button type="btn" class="btn btn-dark">
+                        <i class="fa-brands fa-apple"></i>
+                        <p>Download on the <br>
+                            <span>App Store</span>
+                        </p>
+                    </button></a>
+                </li>
+                <li><a href="#">
+                    <button type="btn" class="btn btn-dark">
+                        <i class="fa-brands fa-google-play"></i>
+                        <p>Get it on <br>
+                            <span class="google">Google App</span>
+                        </p>
+                    </button></a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="bottomfooter">
+            <div class="social">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <p>© 2020 Karcis incorporated</p>
+        </div>
+    </footer>
+
+    <script src="search.js">
+
+    </script>
+</body>
+</html>

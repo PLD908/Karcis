@@ -1,0 +1,26 @@
+nav{
+    padding: 30px 40px;
+}
+nav h2{
+    color: #4F4CEE;
+}
+nav ul{
+    gap: 30px;
+    margin-top: 20px;
+}
+ul li, li a{
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+}
+.btns button{
+    padding: 5px 15px;
+    color: #4F4CEE;
+}
+.btns .btn:hover{
+    background-color: #4F4CEE;
+}
+.btns #btn{
+    background-color: #4F4CEE;
+    color: white;
+}

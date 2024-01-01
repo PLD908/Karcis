@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white !important;
+}
+nav{
+    padding: 30px 40px;
+}
+nav h2{
+    color: #4F4CEE;
+}
+.inputbox input{
+    border: none;
+    width: 50%;
+    padding: 15px;
+}
+.inputbox{
+    height: 45px;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 5px;
+    width: 50%;
+    padding-right: 10px;
+}
+.inputbox button{
+    background-color: #4F4CEE;
+    color: white;
+    font-size: 20px;
+    margin: 5px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+.inputbox img {
+    height: 25px;
+    width: 3px;
+    margin-top: 8px;
+}
+.btns button{
+    padding: 5px 15px;
+    color: #4F4CEE;
+}
+.btns .btn:hover{
+    background-color: #4F4CEE;
+}
+.btns #btn{
+    background-color: #4F4CEE;
+    color: white;
+}
+ul li, li a{
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+}
+.searchresult{
+    width: 100%;
+    padding: 80px;
+    justify-content: space-between;
+    gap: 30px;
+}
+.filter{
+    border-right: 1px solid gray;
+    width: 20%;
+    height: 50%;
+    padding-right: 10px;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 27px;
+}
+.switch input{
+    display: none;
+}
+.switch p{
+    position: absolute;
+    left: 60px;
+    top: 0;
+    font-size: 20px;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider{
+    background-color: #4F4CEE;
+}
+input:focus + .slider{
+    box-shadow: 0 0 1px #4F4CEE;
+}
+input:checked + .slider:before{
+    transform: translateX(26px);
+}
+.location,
+.categories,
+.price{
+    justify-content: space-between;
+    align-items: center;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.checkbox input{
+    height: 18px;
+}
+.checkbox label{
+    font-size: 20px;
+}
+.filter .amount{
+    justify-content: space-between;
+    align-items: center;
+}
+#range{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+.events{
+    width: 80%;
+}
+.result{
+    font-size: 18px;
+}
+#showValue{
+    font-size: 20px;
+    font-weight: 700;
+}
+.events .eventcard{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.card-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.card-body h3{
+    font-size: 18px;
+}
+.drive{
+    color: blue;
+}
+.card:hover{
+    box-shadow: 6px 8px 0 blue;
+    border: 2px solid blue;
+    margin-top: -10px;
+}
