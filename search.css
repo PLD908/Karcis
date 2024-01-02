@@ -154,6 +154,10 @@ input:checked + .slider:before{
     flex-wrap: wrap;
     gap: 20px;
 }
+.eventcard a{
+    text-decoration: none;
+    color: black;
+}
 .card-body{
     display: flex;
     justify-content: space-between;

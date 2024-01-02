@@ -15,27 +15,10 @@ footer ul :where(li, a){
     color: white;
     padding-bottom: 8px;
 }
-.footer button{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    height: 50px;
-}
-.footer button p{
-    font-size: 13px;
-    font-weight: 600;
-    margin-top: 13px;
-}
-.footer button .google{
+footer .bn45{
     font-size: 20px;
-}
-.footer button i{
-    font-size: 23px;
-    height: 30px;
-    width: 30px;
-}
-.footer button span{
-    font-size: 22px;
+    width: 120px;
+    height: 40px;
 }
 hr{
     color: white;

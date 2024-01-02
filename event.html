@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Event Details</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-bg bg-light">
+        <div class="container-fluid">
+            <a href="home.html"><h2>Karcis.com</h2></a>
+            <ul class="d-flex">
+                <li><a href="#">Concerts</a></li>
+                <li><a href="#">Arts</a></li>
+                <li><a href="#">Conference</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">International</a></li>
+            </ul>
+            <div class="btns">
+                <button type="btn" class="btn btn-outline-primary" onclick="login()">Log in</button>
+                <button type="btn" class="btn" id="btn">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bodycontent">
+        <form action="" id="form">
+            <h2>Login to continue</h2>
+            <div id="login">
+                <button type="btn" class="login1" onclick="log()">Log in</button>
+                <button type="btn" class="guest1" onclick="guest()">Guest</button>
+                <div class="login">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" placeholder="name@example.com" class="form-control" id="emailLogin" required>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" placeholder="password" class="form-control" id="passwordLogin" required>
+                    <button type="btn" id="submitLogin">LOGIN</button>
+                </div>
+            </div>
+            <div id="guest">
+                <button type="btn" class="login2" onclick="log()">Log in</button>
+                <button type="btn" class="guest2" onclick="guest()">Guest</button>
+                <div class="guest">
+                    <div class="fullname">
+                        <div class="inputbox col-md-5">
+                            <label for="firstname" class="form-label">Firstname</label>
+                            <br>
+                            <input type="text" placeholder="firstname" class="form-control" id="firstname" required>
+                        </div>
+                        <div class="inputbox col-md-5">
+                            <label for="firstname" class="form-label">Lastname</label>
+                            <br>
+                            <input type="text" placeholder="lastname" class="form-control" id="lastname" required>
+                        </div>
+                    </div>
+                    <label for="number" class="form-label">Phone Number</label>
+                    <input type="number" placeholder="phone number" class="form-control" id="number" required>
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" placeholder="name@example.com" class="form-control" id="email" required>
+                    <p>E-tickets will be sent to your email address, please make sure your email address is correct.</p>
+                    <button type="btn" id="submitform">Continue</button>
+                </div>
+            </div>
+        </form>
+    
+        <div class="shareimage d-flex">
+            <div class="share">
+                <p>Share</p>
+                <div class="icons">
+                    <i class="copy fa-solid fa-copy"></i>
+                    <p class="copytext">Copy link</p>
+                    <a href="https://instagram.com" class="insta" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <p class="instagram">Share to instagram</p>
+                    <a href="https://twitter.com" class="twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <p class="twittertext">Share to twitter</p>
+                    <a href="https://facebook.com" class="facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <p class="facebooktext">Share to facebook</p>
+                </div>
+            </div>
+    
+            <div class="image">
+                <img src="images/event2.jpg" alt="">
+    
+                <div class="content d-flex">
+                    <div class="contenttext">
+                        <h2>Drive In Senja: Back to The Future</h2>
+                        <p><i class="fa-solid fa-location-dot"></i> Parkiran Utama Mall @ Alam Sutera</p>
+                        <p><i class="fa-solid fa-calendar-days"></i> September 22, 2021 · 20.00 - 21.56 WIB</p>
+                        <p>Marty travels back in time using an eccentric scientist's time machine. However, he must make his high-school-aged parents fall in love in order to return to the present.</p>
+                    </div>
+                    <div class="card">
+                        <p>Tickets starting at</p>
+                        <h4>$10,000</h4>
+                        <a href="ticket.html"><button type="btn" class="btn"><span>Buy Tickets</span></button></a>
+                    </div>
+                </div>
+    
+                <div class="information">
+                    <h2>Event Information</h2>
+                    <div class="info d-flex">
+                        <div class="duration d-flex">
+                            <i class="fas fa-sharp fa-light fa-clock-rotate-left"></i>
+                            <div>
+                                <h3>Duration</h3>
+                                <p>20.00 - 21.56 WIB</p>
+                                <p>1 hour 56 minutes</p>
+                            </div>
+                        </div>
+                        <div class="audience d-flex">
+                            <i class="fa-solid fa-user-group"></i>
+                            <div>
+                                <h2>Audience</h2>
+                                <p>This movie is suitable for
+                                    audience aged 12  and above</p>
+                            </div>
+                        </div>
+                        <div class="attention d-flex">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <div>
+                                <h2>Attention</h2>
+                                <p>Face mask and social distancing
+                                    are mandatory outside the car.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="description">
+                    <h2>Description</h2>
+                    <p>Drive-In Senja memberikan retro drive-in experience yang dikemas secara modern. Penggunaan transmisi radio kit, mengintegrasikan suara film ke dalam radio mobil, ditambah proyektor resolusi tinggi yang menyediakan pengalaman visual terbaik. Acara ini merupakan sarana yang aman untuk menghabiskan waktu bersama keluarga, pasangan, maupun komunitas</p>
+                </div>
+    
+                <div class="condition">
+                    <select name="condition" id="">
+                        <option value="Terms">Terms and condition</option>
+                        <option value="cond">something is here..</option>
+                        <option value="condition">somthing is here...</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer d-flex">
+            <h2>Karcis.com</h2>
+            <ul>
+                <li><h2>About</h2></li>
+                <li><a href="#">About Karcis.com</a></li>
+                <li><a href="#">How it works</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Forum</a></li>
+            </ul>
+            <ul>
+                <li><h2>Partner with us</h2></li>
+                <li><a href="#">Partnership Programs</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Connectivity Partner</a></li>
+                <li><a href="#">Promotions and events</a></li>
+                <li><a href="#">Integrations</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Loyalty Program</a></li>
+            </ul>
+            <ul>
+                <li><h2>Support</h2></li>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of service</a></li>
+                <li><a href="#">Trust and safety</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+            <ul>
+                <li><h2>Get the app</h2></li>
+                <li><a href="#">Karcis.com for Android</a></li>
+                <li><a href="#">Karcis.com for iOS</a></li>
+                <li><a href="#">Mobile site</a></li>
+                <li>
+                    <a href="/" tabIndex="0"><img class="bn46" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"alt="bn45"/></a>
+                </li>
+                <li>
+                    <a href="/" tabIndex="0"><img class="bn45" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="bn45"/></a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="bottomfooter">
+            <div class="social">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <p>© 2020 Karcis incorporated</p>
+        </div>
+    </footer>
+
+    <script src="event.js">
+
+    </script>
+</body>
+</html>

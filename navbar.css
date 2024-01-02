@@ -24,3 +24,20 @@ ul li, li a{
     background-color: #4F4CEE;
     color: white;
 }
+.userbtn{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.user{
+    background-color: #DADAFB;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+.user i{
+    font-size: 30px;
+    margin-top: 8px;
+    color: #4F4CEE;
+}

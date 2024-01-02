@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white !important;
+}
+.content{
+    padding: 80px 100px;
+}
+.arrow{
+    border: 2px solid #4F4CEE;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.arrow i{
+    font-size: 20px;
+    color: #4F4CEE;
+    margin-top: 5px;
+}
+.textcontent{
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.imagecontent .ticket{
+    margin-bottom: 60px;
+}
+.image{
+    width: 100%;
+    gap: 40px;
+    justify-content: space-between;
+}
+.image img{
+    width: 50%;
+    height: 220px;
+}
+.imagetext{
+    width: 50%;
+}
+.content button{
+    border: 1px solid #4F4CEE;
+    border-radius: 10px;
+    background-color: white;
+    color: #4F4CEE;
+    font-weight: 500;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    float: right;
+    margin-top: 20px;
+    gap: 10px;
+}
+.cards{
+    width: 100%;
+    margin-top: 100px;
+    clear: right;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.cards .card{
+    text-align: center;
+    padding: 15px;
+    width: 23%;
+    height: 360px;
+}
+.card:hover{
+    box-shadow: 6px 8px 0 blue;
+    margin-top: -10px;
+    border: 2px solid blue;
+}
+.card h2{
+    font-size: 20px;
+}
+.card p{
+    width: 80%;
+    margin: 20px auto;
+    height: 50%;
+    font-size: 12px;
+}
+.card .price{
+    margin: 20px 0;
+}
+.amount{
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+.amount i{
+    font-size: 45px;
+    color: #4F4CEE;
+    cursor: pointer;
+}
+.amount p{
+    font-size: 30px;
+    color: #DDDDDE;
+}
+footer{
+    height: 20vh;
+    margin-top: 20vh;
+    background-color: #4F4CEE;
+    color: white;
+    padding-right: 20px;
+}
+footer #text{
+    text-align: center;
+    padding-top: 50px;
+}
+.showticket{
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+.showticket .type{
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    padding-left: 100px;
+}
+.showticket button{
+    border: none;
+    padding: 10px 20px;
+    height: 50px;
+    color: #4F4CEE;
+    transform: rotate(36deg);
+}
+.bn47{
+    position: relative;
+    padding: 15px 5px 10px 20px;
+    border: 3px solid #776e62;
+    transition: 0.3s ease-in-out;
+}
+.bn47:hover{
+    padding: 0 0;
+}
+.showticket button:hover{
+    transform: rotate(0deg);
+}
