@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Payment Method</title>
+</head>
+<body>
+    <nav class="navbar sticky-top navbar-expand-bg bg-light">
+        <div class="container-fluid">
+            <h2>Karcis.com</h2>
+            <ul class="d-flex">
+                <li><a href="#">Concerts</a></li>
+                <li><a href="#">Arts</a></li>
+                <li><a href="#">Conference</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">International</a></li>
+            </ul>
+            <div class="btns">
+                <div class="userbtn">
+                    <button type="btn" class="btn" id="btn">Sign up</button>
+                    <div class="user">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="textcontent d-flex">
+            <div class="arrow">
+                <a href="event.html"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+            <div class="payment">
+                <h2>Payment Method</h2>
+                <div class="method  d-flex">
+                    <div class="pay">
+                        <div class="credit">
+                            <h3>Credit Card</h3>
+                            <div class="cards d-flex">
+                                <input type="radio" name="payment" class="payMethod" id="credit">
+                                <p>Credit/Debit Card</p>
+                            </div>
+                        </div>
+                        <div class="virtual">
+                            <h3>Virtual Account</h3>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="bca">
+                                    <p>BCA Virtual Account</p>
+                                </div>
+                                <img src="images/bca.png" alt="bca payment">
+                            </div>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="bni">
+                                    <p>BNI Virtual Account</p>
+                                </div>
+                                <img src="images/bni.png" alt="bni payment">
+                            </div>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="mand">
+                                    <p>Mandiri Virtual Account</p>
+                                </div>
+                                <img src="images/mand.png" alt="mandiri payment">
+                            </div>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="other">
+                                    <p>Other Bank</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="electronic">
+                            <h3>Electronic Money</h3>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="go">
+                                    <p>Gopay</p>
+                                </div>
+                                <img src="images/go.png" alt="gopay payment">
+                            </div>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="ovo">
+                                    <p>OVO</p>
+                                </div>
+                                <img src="images/ovo.png" alt="ovo payment">
+                            </div>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="aja">
+                                    <p>LinkAja</p>
+                                </div>
+                                <img src="images/aja.png" alt="linkaja payment">
+                            </div>
+                            <div class="account d-flex">
+                                <div class="inputbox d-flex">
+                                    <input type="radio" name="payment" class="payMethod" id="shopee">
+                                    <p>Shopee pay</p>
+                                </div>
+                                <img src="images/shopee.png" alt="shopee pay payment">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <h2 class="det">Event Details</h2>
+                        <div class="imagecontent d-flex">
+                            <img src="images/event2.jpg" alt="event is here">
+                            <div class="imagetext">
+                                <h2>Drive In Senja: Back to the Future</h2>
+                                <p><i class="fa-solid fa-location-dot"></i> Parkiran Utama Mall @ Alam Sutera</p>
+                                <p><i class="fa-solid fa-calendar-days"></i> September  22, 2021 · 20.00 - 21.56 WIB</p>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <h2 class="summary">Order Summary</h2>
+                            <div class="tickettype d-flex">
+                                <p>Ticket Type</p>
+                                <p class="paket">2 * Paket VIP</p>
+                            </div>
+                        </div>
+                        <div class="priceticket">
+                            <div class="ticketprice d-flex">
+                                <p>Ticket Price</p>
+                                <p class="paket">2 * $10,000</p>
+                            </div>
+                            <div class="ticketprice d-flex">
+                                <p>Service & Handling</p>
+                                <p class="paket">-</p>
+                            </div>
+                            <div class="ticketprice d-flex">
+                                <p>Admin Fee</p>
+                                <p class="paket">-</p>
+                            </div>
+                        </div>
+                        <div class="total d-flex">
+                            <p class="paket">Total</p>
+                            <p class="paket">$20,000</p>
+                        </div>
+                        <div>
+                            <a href="waiting.html"><button type="submit" id="submitform">Continue to payment</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

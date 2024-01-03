@@ -43,18 +43,30 @@
                         <p>E-tickets will be sent to your email address, please make sure your email 
                             address is correct.
                         </p>
-                        <form action="">
-                            <label for="firstname" class="form-label">Firstname</label>
-                            <input type="text" class="form-control col-md-6" placeholder="firsname">
-                            <label for="lastname" class="form-label">Lastname</label>
-                            <input type="text" class="form-control" placeholder="lastname">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" class="form-control" placeholder="name@example.com">
-                            <label for="email" class="form-label">Comfirm Email Address</label>
-                            <input type="email" class="form-control" placeholder="name@example.com">
-                            <label for="number" class="form-label">Phone Number</label>
-                            <input type="number" class="form-control" placeholder="phone number">
-                            <button type="btn">Continue to payment</button>
+                        <form action="" class="row g-4 needs-validation" id="form">
+                            <div class="inputbox col-md-6">
+                                <label for="firstname" class="form-label">Firstname</label>
+                            <input type="text" class="form-control" id="firstname" placeholder="firstname" required>
+                            </div>
+                            <div class="inputbox col-md-6">
+                                <label for="lastname" class="form-label">Lastname</label>
+                            <input type="text" class="form-control" id="lastname" placeholder="lastname" required>
+                            </div>
+                            <div class="inputbox col-md-6">
+                                <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            </div>
+                            <div class="inputbox col-md-6">
+                                <label for="email" class="form-label">Comfirm Email Address</label>
+                            <input type="email" class="form-control" id="email2" placeholder="name@example.com" required>
+                            </div>
+                            <div class="inputbox col-md-6">
+                                <label for="number" class="form-label">Phone Number</label>
+                            <input type="number" class="form-control" id="number" placeholder="phone number" required>
+                            </div>
+                            <div class="col-12">
+                                <a href="payment.html"><button type="submit" id="submitform">Continue to payment</button></a>
+                            </div>
                         </form>
                     </div>
                     <div class="details">
@@ -63,8 +75,8 @@
                             <img src="images/event2.jpg" alt="event is here">
                             <div class="imagetext">
                                 <h2>Drive In Senja: Back to the Future</h2>
-                                <p><i class="fa-solid       fa-location-dot"></i> Parkiran Utama Mall @ Alam Sutera</p>
-                                <p><i class="fa-solid       fa-calendar-days"></i> September  22, 2021 · 20.00 - 21.56 WIB</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Parkiran Utama Mall @ Alam Sutera</p>
+                                <p><i class="fa-solid fa-calendar-days"></i> September  22, 2021 · 20.00 - 21.56 WIB</p>
                             </div>
                         </div>
                         <div class="order">

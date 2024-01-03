@@ -6,63 +6,70 @@ body{
     padding: 0;
     background-color: white !important;
 }
-.content{
-    padding: 80px 100px;
+.waiting{
+    text-align: center;
+    margin-top: 80px;
 }
-.arrow{
-    border: 2px solid #4F4CEE;
-    border-radius: 10px;
-    width: 40px;
-    height: 40px;
+.waiting h2{
+    font-weight: 500;
+}
+.waiting p{
+    background-color: #FBDFDF;
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    height: 50px;
+    width: 50%;
+    margin: 20px auto;
+    color: #EB5757;
 }
-.arrow i{
-    font-size: 20px;
-    color: #4F4CEE;
-    margin-top: 5px;
-}
-.textcontent{
-    justify-content: space-between;
-    gap: 30px;
-    margin-bottom: 60px;
-}
-.information{
-    margin-top: 50px;
+.method{
     width: 100%;
     justify-content: space-between;
-    /* align-items: center; */
     gap: 20px;
+    padding: 50px 100px;
 }
-.form{
+.method .payment{
     border-right: 1px solid gray;
     padding-right: 20px;
     width: 50%;
 }
-.form p{
-    background-color: #F0EFFE;
-    padding: 10px 30px;
+.payment h3{
+    font-size: 24px;
+}
+.payment .ovo{
     color: #4F4CEE;
 }
-form button{
+.payment .list{
+    margin-top: 50px;
+}
+.number{
+    margin-top: 50px;
+}
+.inputbox input{
+    margin-top: 10px;
     width: 50%;
-    background-color: #DADAFB;
+    border: 1px solid gray;
+}
+.button{
+    margin-top: 80px;
+}
+.button button{
+    width: 100%;
     border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: white;
-    margin-top: 100px;
-    float: right;
     height: 50px;
+    color: white;
+    border-radius: 5px;
+    background-color: #DADAFB;
+}
+.button .btn{
+    color: #4F4CEE;
+    background-color: white;
+    border: 1px solid #4F4CEE;
+    margin-top: 15px;
 }
 .details{
     width: 50%;
 }
-.details .det{
+.details .det, .summary{
     margin-bottom: 40px;
     font-size: 24px;
 }
@@ -74,7 +81,7 @@ form button{
 }
 .imagecontent img{
     width: 45%;
-    height: 160px;
+    height: 140px;
 }
 .imagecontent .imagetext{
     width: 55%;
@@ -115,4 +122,7 @@ form button{
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+}
+a{
+    text-decoration: none;
 }

@@ -30,34 +30,57 @@ body{
     gap: 30px;
     margin-bottom: 60px;
 }
-.information{
+.payment{
+    width: 100%;
+}
+.method{
     margin-top: 50px;
     width: 100%;
     justify-content: space-between;
-    /* align-items: center; */
     gap: 20px;
 }
-.form{
+.method .pay{
+    width: 50%;
     border-right: 1px solid gray;
     padding-right: 20px;
-    width: 50%;
 }
-.form p{
-    background-color: #F0EFFE;
-    padding: 10px 30px;
-    color: #4F4CEE;
+.cards{
+    align-items: center;
+    gap: 20px;
+    border: 1px solid gray;
+    width: 100%;
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-top: 20px;
+    height: 45px;
+    padding: 15px;
 }
-form button{
-    width: 50%;
-    background-color: #DADAFB;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: white;
-    margin-top: 100px;
-    float: right;
-    height: 50px;
+:is(.cards, .inputbox) p{
+    margin-top: 15px;
+}
+.virtual,
+.electronic
+{
+    margin-top: 35px;
+}
+.account{
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid gray;
+    width: 100%;
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-top: 20px;
+    height: 45px;
+    padding: 15px;
+}
+.account.active, .cards.active{
+    box-shadow: 6px 8px 0 blue;
+    border: 1px solid blue;
+}
+.inputbox{
+    align-items: center;
+    gap: 20px;
 }
 .details{
     width: 50%;
@@ -115,4 +138,19 @@ form button{
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+}
+.details button{
+    background-color: #DADAFB;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.details a{
+    text-decoration: none;
 }
