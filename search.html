@@ -38,12 +38,11 @@
             <hr>
             <div class="location d-flex">
                 <h3>Location</h3>
-                <button onclick="toggleContent(1)">
-                    <i class="fa-solid fa-angle-up" id="angleUp"></i>
-                    <i class="fa-solid fa-angle-down" id="angleDown"></i>
-                </button>
+                <div>
+                    <i class="angleDown fa-solid fa-angle-down" id="angleDown"></i>
+                </div>
             </div>
-            <div id="checkbox1">
+            <div id="checkbox1" class="drop">
                 <div class="checkbox">
                     <input type="checkbox" name="check" id="">
                     <label for="text">International</label>
@@ -68,12 +67,11 @@
             <hr>
             <div class="categories d-flex">
                 <h3>Categories</h3>
-                <button onclick="toggleContent(2)">
-                    <i class="fa-solid fa-angle-up" id="angleUp2"></i>
-                    <i class="fa-solid fa-angle-down" id="angleDown2"></i>
-                </button>
+                <div>
+                    <i class="angleDown fa-solid fa-angle-down" id="angleDown2"></i>
+                </div>
             </div>
-            <div id="checkbox">
+            <div id="checkbox" class="drop">
                 <div class="checkbox">
                     <input type="checkbox" name="check" id="">
                     <label for="text">Concert</label>
@@ -94,13 +92,12 @@
             <hr>
             <div class="price d-flex">
                 <h3>Price</h3>
-                <button onclick="toggleContent(3)">
-                    <i class="fa-solid fa-angle-up" id="angleUp3"></i>
-                    <i class="fa-solid fa-angle-down" id="angleDown3"></i>
-                </button>
+                <div>
+                    <i class="angleDown fa-solid fa-angle-down" id="angleDown3"></i>
+                </div>
             </div>
             <br>
-            <div id="showRange">
+            <div id="showRange" class="drop">
                 <input type="range" name="range" id="range">
                 <br>
                 <div class="amount d-flex">
@@ -113,25 +110,27 @@
         <div class="events">
             <p class="result">Search result for  <span id="showValue"></span></p>
             <div class="eventcard d-flex">
-                <div class="card">
-                    <img src="images/event1.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Skylight Cinema: Bad Mo..</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Senayan Park</p>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event1.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Skylight Cinema: Bad Mo..</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Senayan Park</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <a href="event.html">
+                </a>
+                <a href="event.html" class="indrive">
                     <div class="card">
                         <img src="images/event2.jpg" alt="">
                         <div class="card-body">
                             <h3>Nov <br>01</h3>
                             <div class="card-text">
-                                <p class="drive">Movies · Drive In</p>
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
                                 <h3 class="card-title">Drive In Senja: Back to th..</h3>
                                 <p class="card-text">$10,000 - $20,000</p>
                                 <p><i class="fa-solid fa-location-dot"></i> Parkiran Utama Mall @ Ala..</p>
@@ -139,126 +138,146 @@
                         </div>
                     </div>
                 </a>
-                <div class="card">
-                    <img src="images/event3.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Anastasia the Musical</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Intercon, Pd. Indah</p>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event3.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Anastasia the Musical</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Intercon, Pd. Indah</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event1.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Lark Drive In: The Fault in..</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Parkiran ICE, BSD City</p>
+                </a>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event1.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Lark Drive In: The Fault in..</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Parkiran ICE, BSD City</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event2.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Retro Drive In:  Breakfast..</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> QBIG BSD</p>
+                </a>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event2.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Retro Drive In:  Breakfast..</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> QBIG BSD</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event3.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Sibili: Indera ke Enam</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Bogor</p>
+                </a>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event3.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Sibili: Indera ke Enam</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Bogor</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event1.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Ameican Drive-In:  Aveng..</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Senopati</p>
+                </a>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event1.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Ameican Drive-In:  Aveng..</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Senopati</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event2.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Drive</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Available Theatres</p>
+                </a>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event2.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Drive</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Available Theatres</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event3.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Movies · Drive In</p>
-                            <h3 class="card-title">Meikarta Drive In: Pitch P..</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Bioskop Ala Pandemi: Oc..</p>
+                </a>
+                <a href="#" class="indrive">
+                    <div class="card">
+                        <img src="images/event3.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive">Movies · <span class="drive-in">Drive In</span></p>
+                                <h3 class="card-title">Meikarta Drive In: Pitch P..</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Bioskop Ala Pandemi: Oc..</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event1.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Conference · Online</p>
-                            <h3 class="card-title">Coding 105: UI/UX Design</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                </a>
+                <a href="#" class="conf">
+                    <div class="card">
+                        <img src="images/event1.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive"><span class="conference">Conference</span> · Online</p>
+                                <h3 class="card-title">Coding 105: UI/UX Design</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event2.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Conference · Online</p>
-                            <h3 class="card-title">Intro to UX/UI Design</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                </a>
+                <a href="#" class="conf">
+                    <div class="card">
+                        <img src="images/event2.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive"><span class="conference">Conference</span> · Online</p>
+                                <h3 class="card-title">Intro to UX/UI Design</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="images/event3.jpg" alt="">
-                    <div class="card-body">
-                        <h3>Nov <br>01</h3>
-                        <div class="card-text">
-                            <p class="drive">Conference · Online</p>
-                            <h3 class="card-title">Skills U: UX/UI Design</h3>
-                            <p class="card-text">$10,000 - $20,000</p>
-                            <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                </a>
+                <a href="#" class="conf">
+                    <div class="card">
+                        <img src="images/event3.jpg" alt="">
+                        <div class="card-body">
+                            <h3>Nov <br>01</h3>
+                            <div class="card-text">
+                                <p class="drive"><span class="conference">Conference</span> · Online</p>
+                                <h3 class="card-title">Skills U: UX/UI Design</h3>
+                                <p class="card-text">$10,000 - $20,000</p>
+                                <p><i class="fa-solid fa-location-dot"></i> Online</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
