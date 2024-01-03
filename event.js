@@ -4,6 +4,8 @@ let loginPage = document.getElementById('login')
     loginPage.style.display = "none";
 let angleUP = document.getElementById('angle-up')
     angleUP.style.display = "none";
+let conditionText = document.getElementById('text')
+    conditionText.style.display = "none";
 
 function login() {
     if (form.style.display === "none") {
@@ -51,3 +53,11 @@ document.getElementById('login').addEventListener('input', function(){
         submit.style.backgroundColor = '#DADAFB';
     }
 });
+
+function condition() {
+    if (conditionText.style.display === "none") {
+        conditionText.style.display = "block"
+    } else {
+        conditionText.style.display = "none"
+    }
+}
