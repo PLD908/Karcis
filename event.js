@@ -2,6 +2,8 @@ let form = document.getElementById('form')
     form.style.display = "none";
 let loginPage = document.getElementById('login')
     loginPage.style.display = "none";
+let angleUP = document.getElementById('angle-up')
+    angleUP.style.display = "none";
 
 function login() {
     if (form.style.display === "none") {

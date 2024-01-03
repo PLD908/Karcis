@@ -160,10 +160,14 @@ button:hover span {
 .condition{
     margin-top: 60px;
 }
-select{
+.condition button{
+    background-color: white;
+    border: 1px solid gray;
     width: 100%;
     height: 50px;
     border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
 form{
     position: absolute;
