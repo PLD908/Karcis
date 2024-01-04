@@ -236,6 +236,9 @@ form button{
 .guest{
     padding: 20px 80px;
 }
+.guest a{
+    text-decoration: none;
+}
 .fullname{
     display: flex;
     justify-content: space-between;
