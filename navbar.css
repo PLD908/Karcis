@@ -4,6 +4,9 @@ nav{
 nav h2{
     color: #4F4CEE;
 }
+nav a{
+    text-decoration: none;
+}
 nav ul{
     gap: 30px;
     margin-top: 20px;

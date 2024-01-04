@@ -56,3 +56,14 @@ document.getElementById('toggleSwitch').addEventListener('click', function() {
         }
     });
 });
+
+let guestProfile = document.getElementById('profile');
+    guestProfile.style.display = "none";
+let loginButton = document.getElementById('login-button');
+
+const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+
+if (isLoggedIn) {
+    loginButton.style.display = "none";
+    guestProfile.style.display = 'block';
+}

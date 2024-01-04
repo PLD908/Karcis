@@ -12,6 +12,9 @@ nav{
 nav h2{
     color: #4F4CEE;
 }
+nav a{
+    text-decoration: none;
+}
 .inputbox input{
     border: none;
     width: 50%;

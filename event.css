@@ -12,7 +12,7 @@ body{
 .shareimage{
     margin: 80px;
     justify-content: space-between;
-    padding-right: 90px;
+    padding-right: 150px;
 }
 .share{
     width: 20%;
@@ -55,10 +55,14 @@ body{
 .facebook:hover + .facebooktext{
     display: block;
 }
+.image{
+    width: 100%;
+    padding-right: 30px;
+}
 .image img{
     border: 20px solid #DADAFB;
     border-radius: 5px;
-    width: 1000px;
+    width: 100%;
     height: 300px;
 }
 .content{
@@ -69,6 +73,13 @@ body{
 }
 .contenttext{
     width: 50%;
+}
+.contenttext h2{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#card{
+    border: 1px solid blue;
 }
 .card{
     box-shadow: 6px 8px 0 blue;
@@ -139,6 +150,9 @@ button:hover span {
 .information{
     margin-top: 50px;
 }
+.information h2{
+    font-size: 25px;
+}
 .info{
     justify-content: space-between;
     align-items: center;
@@ -146,8 +160,11 @@ button:hover span {
     width: 100%;
 }
 :is(.duration, .audience, .attention) {
-    width: 20%;
+    width: 30%;
     gap: 20px;
+}
+:is(.duration, .audience, .attention, .description) h2{
+    font-size: 25px;
 }
 :is(.duration, .audience, .attention) i{
     font-size: 30px;

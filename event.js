@@ -60,4 +60,19 @@ function condition() {
     } else {
         conditionText.style.display = "none"
     }
-}
+};
+
+let loginButton = document.getElementById('login-button');
+let guestProfile = document.getElementById('profile');
+    guestProfile.style.display = "none";
+
+document.getElementById('submitform').addEventListener('click', function() {
+    if (loginButton === "true") {
+        loginButton.style.display = "none";
+        guestProfile.style.display  = "block";
+    }
+
+    sessionStorage.setItem('isLoggedIn', 'true');
+
+    window.location.href = 'search.html';
+})
