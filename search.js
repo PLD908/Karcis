@@ -98,31 +98,3 @@ document.getElementById('log-out').addEventListener('click', function() {
 
     window.location.reload();
 });
-
-let form = document.getElementById('form')
-    form.style.display = "none";
-let loginPage = document.getElementById('login')
-    loginPage.style.display = "none";
-let conditionText = document.getElementById('text')
-    conditionText.style.display = "none";
-
-function login() {
-    if (form.style.display === "none") {
-        form.style.display = "block";
-    } else {
-        form.style.display = "none";
-    }
-};
-
-function setVisibility(elemID, disp) {
-    var x = document.getElementById(elemID);
-        x.style.display = disp;
-}
-function log() {
-setVisibility("login", "")
-setVisibility("guest", "none")
-}
-function guest() {
-setVisibility("guest", "")
-setVisibility("login", "none")
-};
