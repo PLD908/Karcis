@@ -66,13 +66,23 @@ let guestAction = document.getElementById('guest-action');
 let loginButton = document.getElementById('login-button');
 let signUpButton = document.getElementById('btn');
 
-const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
-
-if (isLoggedIn) {
+function updateUIOnLogin() {
     loginButton.style.display = "none";
     signUpButton.style.display = "none";
     guestAction.style.display = 'block';
     guestProfile.style.display = 'block';
+};
+
+document.getElementById('submitform').addEventListener('click', function() {
+    sessionStorage.setItem('isLoggedIn', 'true');
+    window.location.reload();
+    updateUIOnLogin();
+});
+
+const isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
+
+if (isLoggedIn) {
+    updateUIOnLogin();
 };
 
 document.getElementById('guest-action').addEventListener('click', function() {
@@ -93,8 +103,6 @@ let form = document.getElementById('form')
     form.style.display = "none";
 let loginPage = document.getElementById('login')
     loginPage.style.display = "none";
-let angleUP = document.getElementById('angle-up')
-    angleUP.style.display = "none";
 let conditionText = document.getElementById('text')
     conditionText.style.display = "none";
 
@@ -126,7 +134,11 @@ document.getElementById('guest').addEventListener('input', function(){
     var email = document.getElementById('email');
     var submit = document.getElementById('submitform');
 
-    if (firstName.value.trim() !== '' && lastName.value.trim() !== '' && number.value.trim() !== '' && email.value.trim() !== '') {
+    if (firstName.value.trim() !== '' && 
+        lastName.value.trim() !== '' && 
+        number.value.trim() !== '' && 
+        email.value.trim() !== '') 
+        {
         submit.style.backgroundColor = '#4F4CEE';
     } else {
         submit.style.backgroundColor = '#DADAFB';

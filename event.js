@@ -2,8 +2,6 @@ let form = document.getElementById('form')
     form.style.display = "none";
 let loginPage = document.getElementById('login')
     loginPage.style.display = "none";
-let angleUP = document.getElementById('angle-up')
-    angleUP.style.display = "none";
 let conditionText = document.getElementById('text')
     conditionText.style.display = "none";
 
@@ -73,11 +71,17 @@ let guestProfile = document.getElementById('profile');
 let signUpButton = document.getElementById('btn');
     signUpButton.style.display = "block"; 
 
+function updateUIOnLogin() {
+    loginButton.style.display = "none";
+    signUpButton.style.display = "none";
+    guestAction.style.display = 'block';
+    guestProfile.style.display = 'block';
+};
+
 document.getElementById('submitform').addEventListener('click', function() {
-    
     sessionStorage.setItem('isLoggedIn', 'true');
-    
     window.location.reload();
+    updateUIOnLogin();
 });
 
 document.getElementById('guest-action').addEventListener('click', function() {
@@ -91,10 +95,7 @@ document.getElementById('guest-action').addEventListener('click', function() {
 let isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
 
 if (isLoggedIn) {
-    loginButton.style.display = "none";
-    signUpButton.style.display = "none";
-    guestAction.style.display = 'block';
-    guestProfile.style.display = 'block';
+    updateUIOnLogin();
 };
 
 document.getElementById('log-out').addEventListener('click', function() {
