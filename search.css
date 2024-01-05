@@ -15,6 +15,14 @@ nav h2{
 nav a{
     text-decoration: none;
 }
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.guestActions{
+    margin-top: 100px;
+}
 .inputbox input{
     border: none;
     width: 50%;
@@ -22,7 +30,7 @@ nav a{
 }
 .inputbox{
     height: 45px;
-    border: 2px solid black;
+    border: 1px solid black;
     background-color: white;
     border-radius: 5px;
     width: 50%;
@@ -41,22 +49,6 @@ nav a{
     height: 25px;
     width: 3px;
     margin-top: 8px;
-}
-.btns button{
-    padding: 5px 15px;
-    color: #4F4CEE;
-}
-.btns .btn:hover{
-    background-color: #4F4CEE;
-}
-.btns #btn{
-    background-color: #4F4CEE;
-    color: white;
-}
-ul li, li a{
-    color: black;
-    text-decoration: none;
-    list-style-type: none;
 }
 .searchresult{
     width: 100%;
@@ -180,4 +172,92 @@ input:checked + .slider:before{
     box-shadow: 6px 8px 0 blue;
     border: 2px solid blue;
     margin-top: -10px;
+}
+form{
+    position: absolute;
+    background-color: white;
+    border: 2px solid #4F4CEE;
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%);
+    z-index: 1;
+}
+form h2{
+    background-color: #4F4CEE;
+    padding: 7px;
+    color: white;
+    text-align: center;
+}
+form button{
+    width: 49.4%;
+    font-size: 20px;
+    border: none;
+    border-bottom: 3px solid gray;
+    background-color: white;
+}
+.login{
+    padding: 20px 80px;
+}
+.login input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 10px 0 30px 0;
+    border: 1px solid gray;
+}
+.login button{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #DADAFB;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+}
+.login1{
+    border-bottom: 3px solid #4F4CEE;
+}
+.guest2{
+    border-bottom: 3px solid #4F4CEE;
+}
+.guest{
+    padding: 20px 80px;
+}
+.guest a{
+    text-decoration: none;
+}
+.fullname{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.guest input{
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    margin: 10px 0 30px 0;
+    border: 1px solid gray;
+}
+.guest p{
+    background-color: #DADAFB;
+    padding: 15px;
+}
+.guest button{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #DADAFB;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
 }

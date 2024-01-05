@@ -21,14 +21,58 @@
                 <button type="btn" class="btn" onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <div class="btns">
-                <button type="btn" class="btn btn-outline-primary" id="login-button">Log in</button>
-                <button type="btn" class="btn" id="btn">Sign up</button>
+                <button type="btn" class="btn btn-outline-primary" id="login-button" onclick="login()">Log in</button>
+                <button type="btn" class="btt" id="btn">Sign up</button>
+                <button type="btn" class="btn btn-outline-primary" id="guest-action">GuestActions</button>
+                <div class="guestActions" id="action">
+                    <button type="btn" class="btt" id="">Sign up</button>
+                    <button type="btn" class="btt" id="log-out">Log Out</button>
+                </div>
                 <div class="user" id="profile">
                     <i class="fa-solid fa-user"></i>
                 </div>
             </div>
         </div>
     </nav>
+
+    <form action="" id="form">
+        <h2>Login to continue</h2>
+        <div id="login">
+            <button type="btn" class="login1" onclick="log()">Log in</button>
+            <button type="btn" class="guest1" onclick="guest()">Guest</button>
+            <div class="login">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" placeholder="name@example.com" class="form-control" id="emailLogin" required>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" placeholder="password" class="form-control" id="passwordLogin" required>
+                <button type="btn" id="submitLogin">LOGIN</button>
+            </div>
+        </div>
+        <div id="guest">
+            <button type="btn" class="login2" onclick="log()">Log in</button>
+            <button type="btn" class="guest2" onclick="guest()">Guest</button>
+            <div class="guest">
+                <div class="fullname">
+                    <div class="inputbox2 col-md-5">
+                        <label for="firstname" class="form-label">Firstname</label>
+                        <br>
+                        <input type="text" placeholder="firstname" class="form-control" id="firstname" required>
+                    </div>
+                    <div class="inputbox2 col-md-5">
+                        <label for="firstname" class="form-label">Lastname</label>
+                        <br>
+                        <input type="text" placeholder="lastname" class="form-control" id="lastname" required>
+                    </div>
+                </div>
+                <label for="number" class="form-label">Phone Number</label>
+                <input type="number" placeholder="phone number" class="form-control" id="number" required>
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" placeholder="name@example.com" class="form-control" id="email" required>
+                <p>E-tickets will be sent to your email address, please make sure your email address is correct.</p>
+                <a href="ticket.html"><button type="submit" id="submitform">Continue</button></a>
+            </div>
+        </div>
+    </form>
 
     <div class="searchresult d-flex">
         <div class="filter">

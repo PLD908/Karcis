@@ -16,6 +16,14 @@ ul li, li a{
     text-decoration: none;
     list-style-type: none;
 }
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.guestActions{
+    margin-top: 100px;
+}
 .btns button{
     padding: 5px 15px;
     color: #4F4CEE;
@@ -23,9 +31,11 @@ ul li, li a{
 .btns .btn:hover{
     background-color: #4F4CEE;
 }
-.btns #btn{
+.btns .btt{
     background-color: #4F4CEE;
     color: white;
+    border: none;
+    border-radius: 5px;
 }
 .userbtn{
     display: flex;
