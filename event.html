@@ -26,9 +26,10 @@
                 <button type="btn" class="btt" id="btn">Sign up</button>
                 <button type="btn" class="btn btn-outline-primary" id="guest-action">GuestActions</button>
                 <div class="guestActions" id="action">
-                    <button type="btn" class="btt" id="">Sign up</button>
+                    <button type="btn" class="btt" id="guest-signUp">Sign up</button>
                     <button type="btn" class="btt" id="log-out">Log Out</button>
                 </div>
+                <button type="btn" class="btt" id="sign-up-log-out">Log Out</button>
                 <div class="user" id="profile">
                     <i class="fa-solid fa-user"></i>
                 </div>
@@ -54,7 +55,7 @@
                 <button type="btn" class="login2" onclick="log()">Log in</button>
                 <button type="btn" class="guest2" onclick="guest()">Guest</button>
                 <div class="guest">
-                    <div class="fullname">
+                    <div class="input-boxs">
                         <div class="inputbox col-md-5">
                             <label for="firstname" class="form-label">Firstname</label>
                             <br>
@@ -72,6 +73,44 @@
                     <input type="email" placeholder="name@example.com" class="form-control" id="email" required>
                     <p>E-tickets will be sent to your email address, please make sure your email address is correct.</p>
                     <a href="ticket.html"><button type="submit" id="submitform">Continue</button></a>
+                </div>
+            </div>
+        </form>
+
+        <form action="" class="signup">
+            <h2>Sign Up</h2>
+            <div id="sign-up">
+                <div class="guest">
+                    <div class="input-boxs">
+                        <div class="inputbox2 col-md-5">
+                            <label for="firstname" class="form-label">Firstname</label>
+                            <br>
+                            <input type="text" placeholder="firstname" class="form-control" id="sign-up-firstname" required>
+                        </div>
+                        <div class="inputbox2 col-md-5">
+                            <label for="firstname" class="form-label">Lastname</label>
+                            <br>
+                            <input type="text" placeholder="lastname" class="form-control" id="sign-up-lastname" required>
+                        </div>
+                    </div>
+                    <div class="input-boxs">
+                        <div class="inputbox2 col-md-5">
+                            <label for="number" class="form-label">Phone Number</label>
+                            <br>
+                            <input type="number" placeholder="Phone number" class="form-control" id="sign-up-number" required>
+                        </div>
+                        <div class="inputbox2 col-md-5">
+                            <label for="password" class="form-label">Password</label>
+                            <br>
+                            <input type="password" placeholder="password" class="form-control" id="sign-up-password" required>
+                        </div>
+                    </div>
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" placeholder="name@example.com" class="form-control" id="sign-up-email" required>
+                    <label for="email" class="form-label">Confirm Email Address</label>
+                    <input type="email" placeholder="name@example.com" class="form-control" id="sign-up-confirm-email" required>
+                    <p>E-tickets will be sent to your email address, please make sure your email address is correct.</p>
+                    <a href="ticket.html"><button type="submit" id="sign-up-button">Sign Up</button></a>
                 </div>
             </div>
         </form>

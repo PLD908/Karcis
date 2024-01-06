@@ -74,9 +74,9 @@ body{
     height: 360px;
 }
 .card:hover{
-    box-shadow: 6px 8px 0 blue;
+    box-shadow: 6px 8px 0 #4F4CEE;
     margin-top: -10px;
-    border: 2px solid blue;
+    border: 2px solid #4F4CEE();
 }
 .card h2{
     font-size: 20px;
