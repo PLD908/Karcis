@@ -166,11 +166,11 @@ input:checked + .slider:before{
     display: block;
 }
 .drive{
-    color: blue;
+    color: #4F4CEE;
 }
 .card:hover{
-    box-shadow: 6px 8px 0 blue;
-    border: 2px solid blue;
+    box-shadow: 6px 8px 0 #4F4CEE;
+    border: 2px solid #4F4CEE;
     margin-top: -10px;
 }
 form{
@@ -232,7 +232,7 @@ form button{
 .guest a{
     text-decoration: none;
 }
-.fullname{
+.input-boxs{
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -51,3 +51,25 @@ function guest() {
 setVisibility("guest", "")
 setVisibility("login", "none")
 };
+
+document.getElementById('sign-up').addEventListener('input', function(){
+    var signUpFirstName = document.getElementById('sign-up-firstname');
+    var signUpLastName = document.getElementById('sign-up-lastname');
+    var signUpNumber = document.getElementById('sign-up-number');
+    var signUpPassword = document.getElementById('sign-up-password');
+    var signUpEmail = document.getElementById('sign-up-email');
+    var signUpConfirmEmail = document.getElementById('sign-up-confirm-email');
+    var signUpButton = document.getElementById('sign-up-button');
+
+    if (signUpFirstName.value.trim() !== '' && 
+        signUpLastName.value.trim() !== '' && 
+        signUpNumber.value.trim() !== '' && 
+        signUpPassword.value.trim() !== '' && 
+        signUpEmail.value.trim() !== '' &&
+        signUpConfirmEmail.value.trim() !== ''
+        ) {
+        signUpButton.style.backgroundColor = '#4F4CEE';
+    } else {
+        signUpButton.style.backgroundColor = '#DADAFB';
+    }
+});

@@ -234,7 +234,7 @@ form button{
 .guest a{
     text-decoration: none;
 }
-.fullname{
+.input-boxs{
     display: flex;
     justify-content: space-between;
     align-items: center;
