@@ -29,7 +29,8 @@ function navigate() {
         } else {
             alert("Please fill the contact information")
         }
-}
+};
+
 window.addEventListener('DOMContentLoaded', function() {
     submit.addEventListener('click', function(event) {
         event.preventDefault();
