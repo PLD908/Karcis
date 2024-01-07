@@ -30,7 +30,6 @@ document.getElementById('submitform').addEventListener('click', function() {
     var lastName = document.getElementById('lastname');
     var number = document.getElementById('number');
     var email = document.getElementById('email');
-    var submit = document.getElementById('submitform');
 
     if (firstName.value.trim() !== '' && 
         lastName.value.trim() !== '' && 
@@ -52,7 +51,9 @@ if (isLoggedIn) {
     updateUIOnLogin();
 };
 
-document.getElementById('sign-up-button').addEventListener('click', function() {
+document.getElementById('sign-up-button').addEventListener('click', function(event) {
+    event.preventDefault();
+
     var signUpFirstName = document.getElementById('sign-up-firstname');
     var signUpLastName = document.getElementById('sign-up-lastname');
     var signUpNumber = document.getElementById('sign-up-number');
@@ -65,12 +66,16 @@ document.getElementById('sign-up-button').addEventListener('click', function() {
         signUpNumber.value.trim() !== '' && 
         signUpPassword.value.trim() !== '' && 
         signUpEmail.value.trim() !== '' &&
-        signUpConfirmEmail.value.trim() !== ''
+        signUpConfirmEmail.value.trim() !== '' &&
+        signUpEmail.value.trim() === signUpConfirmEmail.value.trim()
         ) {
         sessionStorage.setItem('isSignedIn','true');
         window.location.reload();
         updateUIOnSignUp();
-    } else {
+    } else if (signUpEmail.value.trim() !== signUpConfirmEmail.value.trim()) {
+        alert("The entered emails do not match.")
+    }
+    else {
         sessionStorage.setItem('isSignedIn', 'false');
         alert("Please fill the form")
     }
