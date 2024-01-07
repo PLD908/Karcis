@@ -20,15 +20,30 @@ function updateUIOnLogin() {
 function updateUIOnSignUp() {
     loginButton.style.display = "none";
     signUpButton.style.display = "none";
-    actions.style.display = "none";
+    guestAction.style.display = "none";
     guestProfile.style.display = "block";
     signUpLogOut.style.display = "block"
 };
 
 document.getElementById('submitform').addEventListener('click', function() {
-    sessionStorage.setItem('isLoggedIn', 'true');
-    window.location.reload();
-    updateUIOnLogin();
+    var firstName = document.getElementById('firstname');
+    var lastName = document.getElementById('lastname');
+    var number = document.getElementById('number');
+    var email = document.getElementById('email');
+    var submit = document.getElementById('submitform');
+
+    if (firstName.value.trim() !== '' && 
+        lastName.value.trim() !== '' && 
+        number.value.trim() !== '' && 
+        email.value.trim() !== ''
+        ) {
+        sessionStorage.setItem('isLoggedIn', 'true');
+        window.location.reload();
+        updateUIOnLogin();
+    } else {
+        sessionStorage.setItem('isLoggedIn', 'false');
+        alert("Please fill the form")
+    }
 });
 
 let isLoggedIn = sessionStorage.getItem('isLoggedIn') === 'true';
@@ -38,9 +53,27 @@ if (isLoggedIn) {
 };
 
 document.getElementById('sign-up-button').addEventListener('click', function() {
-    sessionStorage.setItem('isSignedIn','true');
-    window.location.reload();
-    updateUIOnSignUp();
+    var signUpFirstName = document.getElementById('sign-up-firstname');
+    var signUpLastName = document.getElementById('sign-up-lastname');
+    var signUpNumber = document.getElementById('sign-up-number');
+    var signUpPassword = document.getElementById('sign-up-password');
+    var signUpEmail = document.getElementById('sign-up-email');
+    var signUpConfirmEmail = document.getElementById('sign-up-confirm-email');
+
+    if (signUpFirstName.value.trim() !== '' && 
+        signUpLastName.value.trim() !== '' && 
+        signUpNumber.value.trim() !== '' && 
+        signUpPassword.value.trim() !== '' && 
+        signUpEmail.value.trim() !== '' &&
+        signUpConfirmEmail.value.trim() !== ''
+        ) {
+        sessionStorage.setItem('isSignedIn','true');
+        window.location.reload();
+        updateUIOnSignUp();
+    } else {
+        sessionStorage.setItem('isSignedIn', 'false');
+        alert("Please fill the form")
+    }
 });
 
 let isSignedIn = sessionStorage.getItem('isSignedIn') === 'true';
@@ -65,6 +98,7 @@ document.getElementById('log-out').addEventListener('click', function() {
 
 document.getElementById('sign-up-log-out').addEventListener('click', function() {
     sessionStorage.removeItem('isSignedIn');
+    sessionStorage.removeItem('isLoggedIn');
 
     window.location.reload();
 });
@@ -102,6 +136,14 @@ document.getElementById('btn').addEventListener('click', function() {
     }
 });
 
+document.getElementById('guest-signUp').addEventListener('click', function() {
+    if (signUp.style.display === "none") {
+        signUp.style.display = "block";
+    } else {
+        signUp.style.display = "none";
+    }
+});
+
 document.getElementById('guest').addEventListener('input', function(){
     var firstName = document.getElementById('firstname');
     var lastName = document.getElementById('lastname');
@@ -125,12 +167,29 @@ document.getElementById('login').addEventListener('input', function(){
     var password = document.getElementById('passwordLogin');
     var submit = document.getElementById('submitLogin');
 
-    if (email.value.trim() !== '' && password.value.trim() !== '') {
+    if (email.value.trim() !== '' && 
+        password.value.trim() !== '') {
         submit.style.backgroundColor = '#4F4CEE';
     } else {
         submit.style.backgroundColor = '#DADAFB';
     }
 });
+
+document.getElementById('submitLogin').addEventListener('click', function() {
+    var email = document.getElementById('emailLogin');
+    var password = document.getElementById('passwordLogin');
+
+    if (email.value.trim() !== '' && 
+        password.value.trim() !== ''
+        ) {
+        sessionStorage.setItem('isSignedIn','true');
+        window.location.reload();
+        updateUIOnSignUp();
+    } else {
+        sessionStorage.setItem('isSignedIn','false');
+        alert("Please fill the form");
+    }
+})
 
 let form = document.getElementById('form')
     form.style.display = "none";

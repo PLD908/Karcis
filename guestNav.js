@@ -27,3 +27,26 @@ document.getElementById('log-out').addEventListener('click', function() {
     sessionStorage.removeItem('isLoggedIn');
     window.location.href = 'home.html';
 });
+
+let isSignedIn = sessionStorage.getItem('isSignedIn') === 'true';
+
+function updateUIOnSignUp() {
+    guestAction.style.display = "none";
+    signUpLogOut.style.display = "block"
+    guestProfile.style.display = "block";
+};
+
+if (isSignedIn) {
+    updateUIOnSignUp();
+};
+
+signUpLogOut.addEventListener('click', function() {
+    sessionStorage.removeItem('isSignedIn');
+    sessionStorage.removeItem('isLoggedIn');
+
+    window.location.href = 'home.html';
+});
+
+document.getElementById('guest-signUp').addEventListener('click', function() {
+    window.location.href = 'home.html';
+})

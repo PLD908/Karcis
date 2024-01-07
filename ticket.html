@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-bg bg-light">
         <div class="container-fluid">
-            <h2>Karcis.com</h2>
+            <a href="home.html"><h2>Karcis.com</h2></a>
             <ul class="d-flex">
                 <li><a href="#">Concerts</a></li>
                 <li><a href="#">Arts</a></li>
@@ -65,9 +65,9 @@
                 </p>
                 <h2 class="price">$10,000</h2>
                 <div class="amount d-flex">
-                    <i class="iconminus fa-regular fa-square-minus" id="ico"></i>
+                    <i class="icon-minus fa-regular fa-square-minus" id="ico"></i>
                     <p class="amountOfTicket">0</p>
-                    <i class="icon fa-regular fa-square-plus"></i>
+                    <i class="icon fa-regular fa-square-plus" data-ticket-name="Paket Vip" data-ticket-price="$10000"></i>
                 </div>
             </div>
             <div class="card">
@@ -76,19 +76,19 @@
                 </p>
                 <h2 class="price">$20,000</h2>
                 <div class="amount d-flex">
-                    <i class="iconminus fa-regular fa-square-minus"></i>
+                    <i class="icon-minus fa-regular fa-square-minus"></i>
                     <p class="amountOfTicket">0</p>
-                    <i class="icon fa-regular fa-square-plus"></i>
+                    <i class="icon fa-regular fa-square-plus" data-ticket-name="Paket VVIP" data-ticket-price="$20000"></i>
                 </div>
             </div>
             <div class="card">
-                <h2>Paket Ngedate</h2>
+                <h2 data-ticket-name="Ngedate">Paket Ngedate</h2>
                 <p>1 Tiket Mobil (maks. 2 orang)2 Popcorn Drive-In Senja</p>
                 <h2 class="price">$30,000</h2>
                 <div class="amount d-flex">
-                    <i class="iconminus fa-regular fa-square-minus"></i>
+                    <i class="icon-minus fa-regular fa-square-minus"></i>
                     <p class="amountOfTicket">0</p>
-                    <i class="icon fa-regular fa-square-plus"></i>
+                    <i class="icon fa-regular fa-square-plus" data-ticket-name="Paket Ngedate" data-ticket-price="$30000"></i>
                 </div>
             </div>
             <div class="card">
@@ -96,9 +96,9 @@
                 <p>1 Tiket Mobil (maks. 2 orang)2 Hotdog Drive-In Senja</p>
                 <h2 class="price">$40,000</h2>
                 <div class="amount d-flex">
-                    <i class="iconminus fa-regular fa-square-minus"></i>
+                    <i class="icon-minus fa-regular fa-square-minus"></i>
                     <p class="amountOfTicket">0</p>
-                    <i class="icon fa-regular fa-square-plus"></i>
+                    <i class="icon fa-regular fa-square-plus" data-ticket-name="Paket Ngedate Premium" data-ticket-price="$40000"></i>
                 </div>
             </div>
             <div class="card">
@@ -106,9 +106,9 @@
                 <p>1 Tiket Mobil (maks. 3-4 orang)4 Popcorn Drive-In Senja</p>
                 <h2 class="price">$50,000</h2>
                 <div class="amount d-flex">
-                    <i class="iconminus fa-regular fa-square-minus"></i>
+                    <i class="icon-minus fa-regular fa-square-minus"></i>
                     <p class="amountOfTicket">0</p>
-                    <i class="icon fa-regular fa-square-plus"></i>
+                    <i class="icon fa-regular fa-square-plus" data-ticket-name="Paket Rame" data-ticket-price="$50000"></i>
                 </div>
             </div>
             <div class="card">
@@ -116,9 +116,9 @@
                 <p>1 Tiket Mobil (maks. 3-4 orang)4 Hotdog Drive-In Senja</p>
                 <h2 class="price">$60,000</h2>
                 <div class="amount d-flex">
-                    <i class="iconminus fa-regular fa-square-minus"></i>
+                    <i class="icon-minus fa-regular fa-square-minus"></i>
                     <p class="amountOfTicket">0</p>
-                    <i class="icon fa-regular fa-square-plus"></i>
+                    <i class="icon fa-regular fa-square-plus" data-ticket-name="Paket Rame Premium" data-ticket-price="$60000"></i>
                 </div>
             </div>
         </div>
@@ -134,15 +134,15 @@
                 <div class="type d-flex">
                     <div>
                         <p>Qty</p>
-                        <p id="amount">0</p>
+                        <p id="qtyValue"></p>
                     </div>
                     <div>
                         <p>Type</p>
-                        <p id="ticketType">Paket VIP</p>
+                        <p id="ticket-name"></p>
                     </div>
                     <div>
                         <p>price Total (IDR)</p>
-                        <p id="price">$10,000</p>
+                        <p id="price"></p>
                     </div>
                 </div>
                 <a href="check.html" class="bn47"><button type="btn">Buy Ticket</button></a>
@@ -151,6 +151,6 @@
     </footer>
 
     <script src="ticket.js"></script>
-    <script src="guestForm.js"></script>
+    <script src="guestNav.js"></script>
 </body>
 </html>

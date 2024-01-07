@@ -183,7 +183,7 @@ form{
     padding: 0;
     margin: 0 auto;
     left: 50%;
-    top: 20%;
+    top: 30%;
     transform: translate(-50%);
     z-index: 1;
 }

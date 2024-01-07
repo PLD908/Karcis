@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar sticky-top navbar-expand-bg bg-light">
         <div class="container-fluid">
-            <h2>Karcis.com</h2>
+            <a href="home.html"><h2>Karcis.com</h2></a>
             <ul class="d-flex">
                 <li><a href="#">Concerts</a></li>
                 <li><a href="#">Arts</a></li>
@@ -21,11 +21,14 @@
                 <li><a href="#">International</a></li>
             </ul>
             <div class="btns">
-                <div class="userbtn">
-                    <button type="btn" class="btn" id="btn">Sign up</button>
-                    <div class="user">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
+                <button type="btn" class="btn btn-outline-primary" id="guest-action">GuestActions</button>
+                <div class="guestActions" id="action">
+                    <button type="btn" class="btt" id="guest-signUp">Sign up</button>
+                    <button type="btn" class="btt" id="log-out">Log Out</button>
+                </div>
+                <button type="btn" class="btt" id="sign-up-log-out">Log Out</button>
+                <div class="user" id="profile">
+                    <i class="fa-solid fa-user"></i>
                 </div>
             </div>
         </div>
@@ -34,7 +37,7 @@
     <div class="content">
         <div class="textcontent d-flex">
             <div class="arrow">
-                <a href="event.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="ticket.html"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
             <div class="buyer">
                 <h2>Buyer Contact Information</h2>
@@ -43,7 +46,7 @@
                         <p>E-tickets will be sent to your email address, please make sure your email 
                             address is correct.
                         </p>
-                        <form class="row g-4 needs-validation" id="form">
+                        <form class="row g-4" id="form">
                             <div class="inputbox col-md-6">
                                 <label for="firstname" class="form-label">Firstname</label>
                             <input type="text" class="form-control" id="firstname" placeholder="firstname" required>
@@ -65,7 +68,7 @@
                             <input type="number" class="form-control" id="number" placeholder="phone number" required>
                             </div>
                             <div class="col-12">
-                                <a href="payment.html"><button type="btn" id="submitform">Continue to payment</button></a>
+                                <button type="btn" id="submitform">Continue to payment</button>
                             </div>
                         </form>
                     </div>
@@ -110,8 +113,7 @@
         </div>
     </div>
 
-    <script src="check.js">
-
-    </script>
+    <script src="check.js"></script>
+    <script src="guestNav.js"></script>
 </body>
 </html>

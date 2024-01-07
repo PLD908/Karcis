@@ -7,7 +7,7 @@ function condition() {
 };
 
 document.getElementById('buy').addEventListener('click', function() {
-    if(isLoggedIn) {
+    if(isLoggedIn || isSignedIn) {
         window.location.href = 'ticket.html';
     } else {
         alert('You have to login first')
