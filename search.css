@@ -155,12 +155,11 @@ input:checked + .slider:before{
 }
 .card-body{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
 .card-body h3{
-    font-size: 18px;
+    font-size: 14px;
 }
 .indrive{
     display: block;
