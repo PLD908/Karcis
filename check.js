@@ -23,11 +23,15 @@ function navigate() {
         lastName.value.trim() !== '' &&
         number.value.trim() !== '' &&
         email.value.trim() !== '' &&
-        confirmEmail.value.trim() !== ''
+        confirmEmail.value.trim() !== '' &&
+        email.value.trim() === confirmEmail.value.trim()
         ) {
             window.location.href = 'payment.html';
-        } else {
-            alert("Please fill the contact information")
+        } else if (email.value.trim() !== confirmEmail.value.trim()) {
+            alert("The entered emails do not match.");
+        }
+        else {
+            alert("Please fill the contact information");
         }
 };
 
@@ -37,3 +41,16 @@ window.addEventListener('DOMContentLoaded', function() {
         navigate();
     });
 });
+
+let storedTicketName = localStorage.getItem('ticketName');
+let storedTicketPriceString = localStorage.getItem('ticketPrice');
+let qtyValue = localStorage.getItem('qtyValue');
+
+let ticketNameElement = document.getElementById('stored-ticket-name');
+let ticketPriceElement = document.getElementById('stored-ticket-price');
+let totalElement = document.getElementById('total-price');
+
+ticketNameElement.textContent = storedTicketName;
+ticketPriceElement.textContent = qtyValue + " * " + storedTicketPriceString;
+let storedTicketPrice = storedTicketPriceString.replace('$', '');
+totalElement.textContent = '$' + qtyValue * storedTicketPrice;

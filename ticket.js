@@ -1,13 +1,13 @@
 let showTicket = document.getElementById("ticket");
 showTicket.style.display = "none";
 
-let icons = document.querySelectorAll('.icon');
+let plusIcons = document.querySelectorAll('.icon');
 let minusIcons = document.querySelectorAll('.icon-minus');
 let amountOfTicket = document.querySelectorAll('.amount');
 let ticketNameDisplay = document.getElementById('ticket-name');
 let ticketPriceDisplay = document.getElementById('price');
 
-icons.forEach(function (icon) {
+plusIcons.forEach(function (icon) {
     icon.addEventListener('click', function() {
         let footerH4 = document.getElementById('text');
         let showTicket = document.getElementById('ticket');
@@ -24,6 +24,9 @@ icons.forEach(function (icon) {
 
         ticketNameDisplay.textContent = ticketName;
         ticketPriceDisplay.textContent = ticketPrice;
+
+        localStorage.setItem('ticketName', ticketNameDisplay.textContent);
+        localStorage.setItem('ticketPrice', ticketPriceDisplay.textContent);
     });
 });
 
@@ -38,6 +41,8 @@ document.querySelectorAll('.amount').forEach(function(ticket) {
         ticketAmount++;
         amountOfTicketElement.textContent = ticketAmount;
         qtyValue.textContent = ticketAmount;
+
+        localStorage.setItem('qtyValue', qtyValue.textContent);
     });
     
     minusIconElement.addEventListener('click', function() {
@@ -45,6 +50,8 @@ document.querySelectorAll('.amount').forEach(function(ticket) {
             ticketAmount--;
             amountOfTicketElement.textContent = ticketAmount;
             qtyValue.textContent = ticketAmount;
+
+            localStorage.setItem('qtyValue', qtyValue.textContent);
         }
     });
 });

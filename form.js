@@ -73,11 +73,11 @@ document.getElementById('sign-up-button').addEventListener('click', function(eve
         window.location.reload();
         updateUIOnSignUp();
     } else if (signUpEmail.value.trim() !== signUpConfirmEmail.value.trim()) {
-        alert("The entered emails do not match.")
+        alert("The entered emails do not match.");
     }
     else {
         sessionStorage.setItem('isSignedIn', 'false');
-        alert("Please fill the form")
+        alert("Please fill the form");
     }
 });
 

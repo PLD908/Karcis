@@ -52,7 +52,6 @@ inputs.forEach(function(input, index) {
 
 document.addEventListener('DOMContentLoaded', function() {
     function navigate() {
-        console.log("Checking payment methods...");
         var creditCard = document.getElementById('credit');
         var bcaAccount = document.getElementById('bca');
         var bniAccount = document.getElementById('bni');
@@ -63,15 +62,15 @@ document.addEventListener('DOMContentLoaded', function() {
         var aja = document.getElementById('aja');
         var shopee = document.getElementById('shopee');
     
-        if (creditCard.value.trim() !== '' || 
-            bcaAccount.value.trim() !== '' || 
-            bniAccount.value.trim() !== '' ||
-            mandiriAccount.value.trim() !== '' || 
-            otherAccount.value.trim() !== '' || 
-            gopay.value.trim() !== ''||
-            ovo.value.trim() !== '' || 
-            aja.value.trim() !== '' || 
-            shopee.value.trim() !== ''
+        if (creditCard.checked || 
+            bcaAccount.checked || 
+            bniAccount.checked ||
+            mandiriAccount.checked || 
+            otherAccount.checked || 
+            gopay.checked ||
+            ovo.checked || 
+            aja.checked || 
+            shopee.checked
             ) 
             {
             window.location.href = 'waiting.html';
@@ -85,3 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
         navigate();
     });
 });
+
+let storedTicketName = localStorage.getItem('ticketName');
+let storedTicketPriceString = localStorage.getItem('ticketPrice');
+let qtyValue = localStorage.getItem('qtyValue');
+
+let ticketNameElement = document.getElementById('stored-ticket-name');
+let ticketPriceElement = document.getElementById('stored-ticket-price');
+let totalElement = document.getElementById('total-price');
+
+ticketNameElement.textContent = storedTicketName;
+ticketPriceElement.textContent = qtyValue + " * " + storedTicketPriceString;
+let storedTicketPrice = storedTicketPriceString.replace('$', '');
+totalElement.textContent = '$' + qtyValue * storedTicketPrice;

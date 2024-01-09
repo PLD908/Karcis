@@ -28,3 +28,16 @@ document.addEventListener('DOMContentLoaded', function() {
         navigate();
     });
 });
+
+let storedTicketName = localStorage.getItem('ticketName');
+let storedTicketPriceString = localStorage.getItem('ticketPrice');
+let qtyValue = localStorage.getItem('qtyValue');
+
+let ticketNameElement = document.getElementById('stored-ticket-name');
+let ticketPriceElement = document.getElementById('stored-ticket-price');
+let totalElement = document.getElementById('total-price');
+
+ticketNameElement.textContent = storedTicketName;
+ticketPriceElement.textContent = qtyValue + " * " + storedTicketPriceString;
+let storedTicketPrice = storedTicketPriceString.replace('$', '');
+totalElement.textContent = '$' + qtyValue * storedTicketPrice;
